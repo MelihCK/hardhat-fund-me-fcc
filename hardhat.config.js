@@ -1,8 +1,7 @@
-require("@nomicfoundation/hardhat-toolbox")
-require("dotenv").config()
-require("@nomiclabs/hardhat-etherscan")
 require("@nomiclabs/hardhat-waffle")
 require("hardhat-gas-reporter")
+require("@nomiclabs/hardhat-etherscan")
+require("dotenv").config()
 require("solidity-coverage")
 require("hardhat-deploy")
 
@@ -18,12 +17,12 @@ module.exports = {
         compilers: [{ version: "0.8.8" }, { version: "0.6.6" }],
     },
     networks: {
-        goerli: {
-            url: GOERLI_RPC_URL,
-            accounts: [PRIVATE_KEY],
-            chainId: 5,
-            blockConfirmations: 6,
-        },
+        // goerli: {
+        //     url: GOERLI_RPC_URL,
+        //     accounts: [PRIVATE_KEY],
+        //     chainId: 5,
+        //     blockConfirmations: 6,
+        // },
     },
     gasReporter: {
         enabled: true,
